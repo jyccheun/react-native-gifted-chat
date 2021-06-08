@@ -27,7 +27,7 @@
   "scripts": {
     "config:dev": "json -I -f package.json -e 'this.main=\"node_modules/expo/AppEntry.js\"'",
     "config:npm": "json -I -f package.json -e 'this.main=\"lib/index.js\"'",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "tslint -p . -c tslint.json",
     "lint:fix": "./node_modules/.bin/tslint ./src/**/*.{ts,tsx} --fix",
     "tsc": "node_modules/.bin/tsc --noEmit",
     "start": "yarn config:dev && expo start",
